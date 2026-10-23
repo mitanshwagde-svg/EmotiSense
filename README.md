@@ -1,56 +1,76 @@
-# MUJ-DS-23FE10CDS00347
+# 🧠 EmotiSense
 
-## Student details
+## NLP Sentiment & Emotion Analyzer
 
-| Field | Details |
-|---|---|
-| Name | Mitansh Wagde |
-| Registration number | 23FE10CDS00347 |
-| Branch | B.Tech Data Science |
-| Batch | F |
-| Project title | EmotiSense - NLP Sentiment & Emotion Analyzer |
-| GitHub username | [mitanshwagde-svg](https://github.com/mitanshwagde-svg) |
+EmotiSense is an NLP-based sentiment and emotion analysis application that combines traditional Natural Language Processing techniques with Google's Gemini Large Language Model.
 
-## Training program
+The application accepts natural language text and analyzes its overall sentiment, emotional characteristics, and important keywords.
 
-NLP Training / Capstone Project
+---
 
-## Repository contents
+## 🚀 Features
 
-| Path | Purpose |
-|---|---|
-| [assignments/](assignments/README.md) | Training assignment submissions |
-| [notebooks/](notebooks/README.md) | Exploratory and instructional notebooks |
-| [code/](code/README.md) | Reusable training code and utilities |
-| [resources/](resources/README.md) | Supporting resources, screenshots, and evaluation evidence |
-| [presentations/](presentations/README.md) | Capstone presentation materials |
-| [capstone/](capstone/README.md) | Capstone project source and documentation |
-| [capstone/EmotiSense/](capstone/EmotiSense/README.md) | EmotiSense application, setup guide, and usage |
+- Sentiment classification
+- Sentiment confidence score
+- Multi-emotion detection
+- Dominant emotion identification
+- AI-generated emotional explanation
+- Text preprocessing
+- Tokenization
+- Stopword removal
+- TF-IDF keyword extraction
+- Google Gemini API integration
+- Structured JSON responses
+- Streamlit-based interactive interface
+- Fallback handling for temporary Gemini API failures
 
-## Capstone project
+🤖 LLM Integration
+EmotiSense uses the Google Gemini API for contextual sentiment and emotion analysis.
 
-EmotiSense is a Streamlit application that combines text preprocessing and TF-IDF keyword extraction with Gemini-based sentiment and emotion analysis. See the [project guide](capstone/EmotiSense/README.md) for features, setup, and usage.
+The LLM is instructed through an external prompt file to return structured JSON containing:
+- Overall sentiment
+- Sentiment confidence
+- Emotion intensity scores
+- Explanation of the analysis
+The application uses multiple Gemini models as fallbacks when a model is temporarily unavailable.
+🎭 Supported Emotions
+The system analyzes the following emotions:
+- Joy
+- Sadness
+- Anger
+- Fear
+- Disgust
+- Surprise
+- Neutral
+The system can identify multiple emotions in the same text.
+🛠️ Technology Stack
+- Python
+- Streamlit
+- NLTK
+- Scikit-learn
+- Google Gemini API
+- Google GenAI SDK
+- python-dotenv
 
-## Submission checklist
+---
 
-Before final submission, verify each item in GitHub and replace or complete any project-specific material that is still missing:
+## 🧠 NLP Pipeline
 
-- [ ] Keep this personal repository public unless instructed otherwise.
-- [ ] Add the instructor as a collaborator to this repository and retain access during training.
-- [ ] Create or confirm the separate team capstone repository; add all team members and the instructor as collaborators.
-- [ ] Record meaningful weekly updates in commits and issues; each team member should make and document their contributions.
-- [ ] Use branches, pull requests, reviews, and approved merges for team changes.
-- [ ] Complete the presentation, capture real application screenshots, and include genuine test/evaluation results in `presentations/` and `resources/`.
-- [ ] Submit this personal repository URL, the team capstone repository URL, the presentation, and any other materials requested by the instructor.
+The application follows this pipeline:
 
-## GitHub
-
-- Personal repository: <https://github.com/mitanshwagde-svg/MUJ-DS-23FE10CDS00347>
-- GitHub username: [mitanshwagde-svg](https://github.com/mitanshwagde-svg)
-
-## Author
-
-Mitansh Wagde
-B.Tech Data Science
-Manipal University Jaipur
-Batch F
+```text
+User Input
+    ↓
+Text Cleaning
+    ↓
+Tokenization
+    ↓
+Stopword Removal
+    ↓
+TF-IDF Keyword Extraction
+    ↓
+Gemini LLM Analysis
+    ↓
+Sentiment + Emotion Classification
+    ↓
+Interactive Results
